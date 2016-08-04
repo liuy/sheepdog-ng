@@ -265,8 +265,6 @@ static void crash_handler(int signo, siginfo_t *info, void *context)
 		info->si_errno, info->si_code);
 
 	sd_backtrace();
-	sd_dump_variable(__sys);
-
 	reraise_crash_signal(signo, 1);
 }
 
